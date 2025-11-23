@@ -1,0 +1,40 @@
+🔄 Project Workflow
+
+System Power-Up
+The microcontroller initializes all sensors, the relay module, and output indicators. The water pump is set to an inactive state by default.
+
+Continuous Sensor Monitoring
+The system repeatedly reads values from:
+
+Flame sensor
+
+Gas sensor
+
+Ultrasonic distance sensor
+
+Data Evaluation
+Each reading is compared to predefined thresholds to determine:
+
+Presence of fire
+
+Presence of hazardous gas
+
+Bin fullness level
+
+Hazard Detection Logic
+
+If flame intensity indicates fire or gas level exceeds the safe limit, the system classifies the environment as hazardous.
+
+Bin fullness is checked based on distance measurements.
+
+Automated Response Activation
+
+Relay ON → Water pump activates when fire or gas hazard is detected.
+
+LED ON when the bin reaches the full threshold.
+
+Real-Time Data Feedback
+Sensor readings and status messages are output through the Serial Monitor for user observation, debugging, or data logging.
+
+Loop and Re-evaluate
+The process repeats continuously, creating a real-time monitoring and response cycle.
